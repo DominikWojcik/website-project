@@ -57,7 +57,7 @@ class Form extends React.Component{
                            pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" onBlur={this.inputHandler1}/>
                 </div>
                 <div className="form-row">
-                    <label htmlFor="field-email">Email*</label>
+                    <label htmlFor="field-email">Email</label>
                     <input type="email" name="imObjectForm_3_2" required id="field-message"
                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" onBlur={this.inputHandler2}/>
                 </div>

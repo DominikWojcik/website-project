@@ -408,7 +408,7 @@ if (imieninyDate && imieninyDate.length){
          date = imieninyDate[1] + ' i ' + imieninyDate[0];
         dateForSite = string + date;
     }else{
-         string = 'Dzisiaj są imieniny:';
+         string = 'Dzisiaj są imieniny: ';
          for(let i=0; i<imieninyDate.length-1; i++){
              if(i!==0){
                  date+= ', '

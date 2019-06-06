@@ -36,9 +36,13 @@ a {
     height: 500px;
     width: 500px;
 }
+.mainBoxBackgroundBig, .mainBoxBackgroundBig .mainBoxHolder{
+    background-color: unset;
+    border: none;
+}
 
 .mainBoxBackgroundBig{
-    width: 100vw
+    width: 850px
 }
 .mainBox{
     font-family: "Indie Flower", sans-serif;
@@ -50,10 +54,14 @@ a {
     width: 500px;
 }
 .mainBoxBig p {
-    font-size: 2rem;
+    font-size: 2.3rem;
+    margin-left: 40px;
+    font-family: "Courgette", sans-serif;
+    color: #6A4528;
 }
 .mainBoxBig {
-    width: 95vw;
+    width: 99%;
+    margin: 350px auto;
 }
 .mainBoxHolder{
     background-color: white;
@@ -88,9 +96,8 @@ a {
     line-height: 40px;
 }
 .linkHolder li a:hover{
-    color: blueviolet;
+    color: fuchsia;
 }
-
 
 body{
     min-height: 100%;
@@ -107,6 +114,12 @@ body{
     list-style: none;
     text-decoration: none;
     background-image: none;
+}
+
+.logoHolder{
+    position: relative;
+    margin: auto 160px;
+
 }
 
 .titleLogo:hover{
@@ -138,23 +151,40 @@ body{
     height: 70px;
     background-color: #8F00FF;
 }
+
+.nav-headder{
+    display: flex;
+    justify-content: center;
+}
 .nav-headder ul{
-    margin-top: 30px;
+    margin-top: 25px;
     display: flex;
     flex-direction: row;
-    align-content: center;
+
 }
 .nav-headder li{
-    margin-left: 10px;
+    margin-left: 20px;
     list-style: none;
-    color: white;
 
 }
 
-.nav-headder li a{
+.nav-headder li a, .footerBeam{
+    position: relative;
     text-decoration: none;
     background-image: none;
-    color: black;
+    color: white;
+    font-family: "Courgette", sans-serif ;
+    font-size: 2.5rem;
+}
+.footerBeam{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.nav-headder li a:hover{
+    color: fuchsia;
+    text-shadow: 1px 1px 3px black;
 }
 
 .footerBeam{
@@ -178,3 +208,136 @@ body{
     justify-content: space-around;
     font-size: 3rem;
 }
+.form-row{
+    display: flex;
+    flex-flow: column;
+}
+.form{
+    width: 35%;
+}
+
+.form input, .form textarea{
+    background-color: unset;
+    height: 20px;
+}
+
+.form textarea{
+    height: 100px;
+}
+
+.form label{
+    margin-top: 15px;
+    font-family: "Courgette", sans-serif ;
+    font-size: 2.5rem;
+    color: #6A4528;
+}
+.submit-btn{
+    background-color: unset;
+    font-family: "Courgette", sans-serif;
+    color: #6A4528;
+    font-size: 1.8rem;
+    border: 2px solid grey;
+}
+.imgHolder{
+    margin-right: 10px;
+}
+
+.myMap {
+    /*-webkit-filter: grayscale(80%);*/
+    filter: grayscale(100%)
+}
+
+.linkHolderOffer {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    font-size: 2.3rem;
+    font-family: "Indie Flower", sans-serif;
+    position: relative;
+}
+.linkHolderOffer>div{
+    position: relative;
+}
+.linkHolderOffer h2{
+    margin: 10px;
+    position: absolute;
+    top:100%;
+    left: 10%;
+    color: white;
+    text-shadow: 4px 4px 4px blueviolet;
+
+}
+
+.linkHolderOffer h2:hover{
+    color: fuchsia;
+    text-shadow: 4px 4px 4px white;
+
+}
+
+.linkHolderOffer .flowers{
+    height: 230px;
+    width: 330px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid darkgoldenrod;
+    filter: sepia(40%);
+;
+}
+
+.weedingFlowers{
+    background-image: url("../img/kwiaty-slub.jpg");
+
+}
+
+.flowers:hover{
+    filter: contrast(130%);
+
+}
+.otherFlowers{
+    background-image: url("../img/kwiaty-rozne.jpg");
+}
+.chirchFlower{
+    background-image: url("../img/kwiaty-kosciol.jpg");
+}
+
+.weedingRoom{
+    background-image: url("../img/sala-weselna.jpg");
+
+}
+.weedingCar{
+    background-image: url("../img/samochod.jpg");
+
+}
+.jewelry{
+    background-image: url("../img/bizuteria.jpg");
+
+}
+.flowersSmall .flowers{
+    height: 180px;
+    width: 280px;
+    margin: 10px;
+
+}
+
+
+.flowersSmall h2{
+    font-size: 2.5rem;
+    top: 70%;
+    left: 10px;
+}
+.linkHolderSmall{
+
+    position: absolute;
+    width: 950px;
+
+}
+.flowersSmall{
+    position: absolute;
+    left: -50px;
+
+}
+

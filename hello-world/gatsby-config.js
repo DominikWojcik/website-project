@@ -16,7 +16,7 @@ module.exports = {
             resolve: `gatsby-plugin-google-fonts`,
             options: {
                 fonts: [
-                    `Open Sans`,`Caveat`, 'Indie Flower',
+                    `Dancing Script`,`Open Sans`,`Caveat`, 'Indie Flower',`Courgette`,
                     `source sans pro\:300,400,700` // you can also specify font weights and styles
                 ]
             },

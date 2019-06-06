@@ -19,14 +19,18 @@ class MainBox extends React.Component{
             <div className='mainBoxBackgroundBig'>
                 <div className='mainBoxBig'>
                     <div className='mainBoxHolder'>
-                        <h1 className='title'><ListLink to="/">Kraspedia</ListLink></h1>
-                        <img className='titleLogo' src="https://img.icons8.com/nolan/96/000000/spring.png"/>
-                        <h2 className='titleSmall'>pracownia florystyczna</h2>
+                        <div className='logoHolder'>
+                            <h1 className='title'><ListLink to="/">Kraspedia</ListLink></h1>
+                            <img className='titleLogo' src="https://img.icons8.com/nolan/96/000000/spring.png"/>
+                            <h2 className='titleSmall'>pracownia florystyczna</h2>
+                        </div>
                         <div className='contactDataHolder'>
                             <Form/>
                             <Maps/>
 
                         </div>
+
+
 
                     </div>
                 </div>
@@ -37,11 +41,21 @@ class MainBox extends React.Component{
 
 
 export default () => (
-    <Layout>
-        <Header/>
-        <MainBox/>
+    <div>
+        <Layout>
+            <Header/>
+            <MainBox/>
+        </Layout>
         <Footer/>
-    </Layout>
+        <h2>Pracownia florystyczna Kraspedia<br/>
+            Adres: ul. Dziupli 8<br/>
+            02-454 Warszawa<br/>
+            Tel.kom. 693-270-482<br/>
+            E-mail: kraspedia2010@gmail.com<br/>
+            NIP: 757-138-43-80<br/>
+            REGON: 142220473</h2>
+    </div>
+
 
 
 )
