@@ -49,7 +49,7 @@ class Lista extends React.Component{
                         <img alt='flower' src="https://img.icons8.com/material/26/000000/flower.png"/>
                         <ListLink to="/contact/">Kontakt</ListLink>
                     </li>
-                    <li><ListLink to="/contact/">Allegro</ListLink></li>
+                    <li><a href="https://www.facebook.com/kraspedia.pracowniaflorystyczna">Facebook</a></li>
                 </ul>
             </div>
         );
