@@ -25,7 +25,7 @@ class MainBox extends React.Component{
                             <h2>Pełna klasy dekoracja samochodu, kwiaty, wstążki, ratany.</h2>
                             <p>Do przystrojenia auta powinno używać się żywych, a nie sztucznych kwiatów.
                                 Popularne są dekoracje ażurowe, które doskonale podkreślają charakter tego szczególnego dnia. Należy dobrać kwiaty do charakteru auta, zwracając uwagę na kolor, gatunek, formę, a przede wszystkim na trwałość roślin.
-                                Przeróżne są pomysły Młodych, a w połączeniu z doradztwem florysty da zapewne niesamowity efekt. Inaczej będzie strojone auto, jeśli do ślubu zamierzamy jechać nowoczesnym sportowym autem, a inaczej ponadprzeciętnym samochodem… </p>
+                                Przeróżne są pomysły Młodych, a w połączeniu z doradztwem florysty da zapewne niesamowity efekt. Inaczej będzie strojone auto, jeśli do ślubu zamierzamy jechać nowoczesnym sportowym autem, a inaczej ponadczasowym samochodem… </p>
                         </div>
 
                     </div>
