@@ -12,11 +12,12 @@ This is my last project in Coders Lab - IT shool and also new web site for my
 sister in law for her flower shop.
 
 In this project were used:<br/>
- `React Components`<br/>
+ `Gatsby js - with React Components`<br/>
  `Java script`<br/>
  `CSS`<br/>
+ `my current knowledge - HTML, JS, REACT, CSS... `
 
-## 🚀 How to use code on your compouter
+## 🚀 How to run code on your compouter
 
   **Install Node.js and npm**
 
