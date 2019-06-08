@@ -421,7 +421,7 @@ if (imieninyDate && imieninyDate.length){
 
 }
 
-class Imieniny extends React.Component{
+class NameDay extends React.Component{
     render() {
         return (
             <div> {dateForSite}</div>
@@ -430,5 +430,5 @@ class Imieniny extends React.Component{
 }
 
 export default () => (
-    <Imieniny/>
+    <NameDay/>
 )

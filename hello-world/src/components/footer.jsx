@@ -1,5 +1,5 @@
 import React from "react"
-import Imieniny from '../components/imieniny'
+import NameDay from '../components/imieniny'
 
 
 
@@ -9,9 +9,9 @@ class Footer extends React.Component{
         return (
             <div className='footerBeam'>
                 <div className='imgHolder'>
-                    <img src="https://img.icons8.com/metro/26/000000/calendar-11.png"/>
+                    <img alt='icon' src="https://img.icons8.com/metro/26/000000/calendar-11.png"/>
                 </div>
-                <Imieniny/>
+                <NameDay/>
             </div>
         );
     }

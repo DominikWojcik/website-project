@@ -1,5 +1,8 @@
 import React from "react";
 
+
+
+
 class Form extends React.Component{
     constructor(props) {
         super(props);
@@ -11,65 +14,93 @@ class Form extends React.Component{
         }
     }
     inputHandler1 = (e)=>{
-        e.target.style.color = 'black';
+
         if ( e.target.value.length < 5 ){
-            e.target.value ='podaj imię i nazwisko ';
-            e.target.style.color = 'red'
+    //        e.target.value ='podaj imię i nazwisko ';
+            e.target.className = 'notValid'
+        }else {
+            e.target.classList.remove('notValid');
+            this.setState({
+                name: e.target.value
+            })
         }
     };
     inputHandler2 = (e)=>{
-        e.target.style.color = 'black';
-        if (e.target.value.indexOf('@') && e.target.value.length < 3 ){
-            e.target.value ='podaj prawidłowy adres email';
-            e.target.style.color = 'red'
+        if (e.target.value.indexOf('@') <0 || e.target.value.length < 3 ){
+        //    e.target.value ='podaj prawidłowy adres email';
+            e.target.className = 'notValid'
+        }else {
+            e.target.classList.remove('notValid');
+            this.setState({
+                email: e.target.value
+            })
         }
     };
     inputHandler3 = (e)=>{
-        e.target.style.color = 'black';
         if ( e.target.value.length < 3 ){
-            e.target.value ='podaj temat';
-            e.target.style.color = 'red'
+      //      e.target.value ='podaj temat';
+            e.target.className = 'notValid'
+        }else {
+            e.target.classList.remove('notValid');
+            this.setState({
+                topic: e.target.value
+            })
         }
     };
     inputHandler4 = (e)=>{
-        e.target.style.color = 'black';
+
         if ( e.target.value.length < 8 ){
-            e.target.value ='wpisz wiadomość';
-            e.target.style.color = 'red'
+       //     e.target.value ='wpisz wiadomość';
+            e.target.className = 'notValid'
+        }else {
+            e.target.classList.remove('notValid');
+            this.setState({
+                text: e.target.value
+            })
         }
     };
-//wrzuamy dane do maila przez fetch ze strony https://stackoverflow.com/questions/46640024/how-do-i-post-form-data-with-fetch-api
-    // let formData = new FormData();
-    // formData.append('name', 'John'); //tu dać state z kązdego pola
-    // formData.append('password', 'John123');
-    //
-    // fetch("api/SampleData",
-    //     {
-    //         body: formData,
-    //         method: "post"
-    //     });
+
+    submitHandler = (e)=>{
+        e.preventDefault();
+        let formData = new FormData();
+        formData.append('imObjectForm_3_1', this.state.name);
+        formData.append('imObjectForm_3_2', this.state.email);
+        formData.append('imObjectForm_3_3', this.state.topic);
+        formData.append('imObjectForm_3_4', this.state.text);
+        fetch("/mail/imEmailForm.php",
+            {
+                body: formData,
+                method: "post",
+
+            })
+            .then(function () {
+                console.log('ok')
+            }).catch(function () {
+                alert('Błąd wysyłania danych, spróbuj ponownie później')
+        });
+    };
     render() {
         return (
-            <form className="form" id="imObjectForm_3" method="post" >
+            <form className="form" id="imObjectForm_3" method="post" onSubmit={this.submitHandler}>
                 <div className="form-row">
                     <label htmlFor="field-name">Imię i Nazwisko</label>
-                    <input type="text" name="imObjectForm_3_1" required id="field-message"
-                           pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" onBlur={this.inputHandler1}/>
+                    <input type="text" name="imObjectForm_3_1" required
+                           pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" onInput={this.inputHandler1}/>
                 </div>
                 <div className="form-row">
                     <label htmlFor="field-email">Email</label>
-                    <input type="email" name="imObjectForm_3_2" required id="field-message"
-                           pattern="[^@\s]+@[^@\s]+\.[^@\s]+" onBlur={this.inputHandler2}/>
+                    <input type="email" name="imObjectForm_3_2" required
+                           pattern="[^@\s]+@[^@\s]+\.[^@\s]+" onInput={this.inputHandler2}/>
                 </div>
                 <div className="form-row">
                     <label htmlFor="field-name">Temat</label>
-                    <input type="text" name="imObjectForm_3_3" required id="field-message"
-                           pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" onBlur={this.inputHandler3}/>
+                    <input type="text" name="imObjectForm_3_3" required
+                           pattern="[a-zA-ZąĄććęęłŁńŃóÓśŚżŻŹŹ ]+" onInput={this.inputHandler3}/>
                 </div>
                 <div className="form-row">
                     <label htmlFor="field-message">Wiadomość</label>
-                    <textarea name="imObjectForm_3_4" required  id="field-message"
-                              pattern=".+" onBlur={this.inputHandler4}/>
+                    <textarea name="imObjectForm_3_4" required
+                              pattern=".+" onInput={this.inputHandler4}/>
                 </div>
                 <div className="form-row">
                     <button type="submit" className="submit-btn">
