@@ -19,7 +19,8 @@ In this project were used:<br/>
  
 The website working properly on bigger screens, mobile version under construction.
 
-Demo preview: http://savory-spring.surge.sh/
+Demo preview: www.synonymous-alley.surge.sh
+
 
 ## 🚀 How to run code on your compouter
 
