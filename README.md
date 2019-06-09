@@ -16,6 +16,10 @@ In this project were used:<br/>
  `Java script`<br/>
  `CSS`<br/>
  `my current knowledge - HTML, JS, REACT, CSS... `
+ 
+The website working properly on bigger screens, mobile version under construction.
+
+Demo preview: http://savory-spring.surge.sh/
 
 ## 🚀 How to run code on your compouter
 
